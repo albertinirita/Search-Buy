@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+        
+    <link rel="stylesheet" href="Stile.css">
+    <script type="text/javascript" src="Utenti.json"></script>
+    <script type="text/javascript" src="Login.js"></script>
+    
+    
+</head>
+
+<body class="bg-light">
+    
+    <img src=img/logoscritta.png class="mx-auto mb-4 d-block" id="logo">
+
+    <div class="container" id="loginForm">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                
+                
+                
+                <div class="card border bg-white shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title">Accedi</h3>
+                        <hr>
+                            <form>
+                                <div class="form-group">
+                                    <input id="c" type="radio" name="tipo" value="cliente"> Cliente <br>
+                                    <input id="v" type="radio" name="tipo" value="venditore"> Venditore
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Indirizzo e-mail:</label><br>
+                                    <input id="email" type="email" name="email" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password:</label><br>
+                                    <input id="password" type="password" name="password" class="form-control">
+                                </div>
+                            </form>
+                                <div class="form-group">
+                                    <input type="submit" onclick="login()" class="btn btn-primary btn-block" value="Accedi">
+                                </div>
+                            
+
+                            <hr>
+                            <p class="text-center">Non hai ancora un account?</p>
+                            <a href="Registrazione.html" class="btn btn-secondary btn-block">Registrati qui</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--FOOTER-->
+    <footer class="page-footer text-center text-secondary mt-5 small">
+        <p>Project by Rita Albertini<br>SEARCH & BUY</p>
+    </footer>
+
+</body>
+</html>

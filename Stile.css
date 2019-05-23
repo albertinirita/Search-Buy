@@ -1,0 +1,39 @@
+/*HOME*/
+#main{
+    width: 90%;
+}
+
+.imghome{
+    max-width: 170px;
+    min-width: 120px;
+    width: 30%;
+}
+
+/*INFO*/
+.imginfo{
+    width: 70%;
+}
+
+
+/*LOGIN*/
+#logo{
+    width: 40%;
+    max-width: 400px;
+    margin: 15px;
+}
+
+#loginForm{
+    max-width: 800px;
+}
+
+/*REGISTRAZIONE*/
+#registrazioneForm{
+    max-width: 1200px;
+}
+
+#form-v{
+    display: none;
+}
+
+
+

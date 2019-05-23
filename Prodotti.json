@@ -1,0 +1,136 @@
+var Prodotti = 
+[
+            {
+                "Nome" : "Honor 9 Lite",
+                "Prezzo" : "156.24",
+                "Immagine" : "img/honor9.jpg",
+                "Descrizione" : "Smartphone con schermo 5.65'' FHD+, 3 GB RAM, doppia fotocamera 13 e 2 MP, 32 GB di memoria, Blu",
+                "QuantitaMax" : "7",
+                "Spedizione" : "Spedizione gratuita",
+                "Codice" : 1,
+                "Categoria" : "Telefonia",
+                "Recensioni" : []
+            },
+            {
+                "Nome" : "Xiaomi Mi 9 SE",
+                "Prezzo" : "349.90",
+                "Immagine" : "img/mi9.jpg",
+                "Descrizione" : "Smartphone da 64GB di memoria, con display FHD+ da 5.97'', Qualcomm Snapdragon 712, Fotocamera da 48 MP, Risoluzione Ultra High, Nero (Piano Black)",
+                "QuantitaMax" : "3",
+                "Spedizione" : "Spedizione gratuita",
+                "Codice" : 2,
+                "Categoria" : "Telefonia",
+                "Recensioni" : []
+            },
+            {
+                "Nome" : "OnePlus 6",
+                "Prezzo" : "429.90",
+                "Immagine" : "img/oneplus.jpg",
+                "Descrizione" : "Smartphone da 8GB RAM, 128 GB Memoria (non espandibile), OxygenOS basato su Android Oreo, Camera Doppia (16 + 20 MPx), Dual SIM, Nero (Midnight Black)",
+                "QuantitaMax" : "4",
+                "Spedizione" : "Spedizione gratuita",
+                "Codice" : 3,
+                "Categoria" : "Telefonia",
+                "Recensioni": []
+            },
+            {
+                "Nome" : "DELL XPS 15",
+                "Prezzo" : "1608.90",
+                "Immagine" : "img/dell.jpg",
+                "Descrizione" : "Notebook con display 15.6'' FHD, processore Intel Core i7-8750H, memoria RAM da 16 GB, 512 GB SSD,  NVIDIA GeForce GTX 1050 Ti, Windows 10 Pro",
+                "QuantitaMax" : "0",
+                "Spedizione" : "Spedizione gratuita",
+                "Codice" : 4,
+                "Categoria" : "Computer",
+                "Recensioni" : []
+            },
+            {
+                "Nome" : "Apple MacBook Air",
+                "Prezzo" : "1099.00",
+                "Immagine" : "img/mac.jpg",
+                "Descrizione" : "Apple MacBook Air 13'', Processore Intel Core i5 dual-core a 1,6GHz, 128GB di memoria, Argento",
+                "QuantitaMax" : "1",
+                "Spedizione" : "Spedizione gratuita",
+                "Codice" : 5,
+                "Categoria" : "Computer",
+                "Recensioni" : []
+            },
+            {
+                "Nome" : "Canon EOS 4000D",
+                "Prezzo" : "270.00",
+                "Immagine" : "img/canon.jpg",
+                "Descrizione" : "Canon Italia EOS 4000D + EF-S DC III Fotocamera Reflex, Nero, Lunghezza Focale 18-55 mm",
+                "QuantitaMax" : "1",
+                "Spedizione" : "Spedizione gratuita",
+                "Codice" : 6,
+                "Categoria" : "Fotocamere",
+                "Recensioni" : []
+            },
+            {
+                "Nome" : "GoPro hero7",
+                "Prezzo" : "379.00",
+                "Immagine" : "img/gopro.jpg",
+                "Descrizione" : "Action Camera 4K con Hypersmooth, Stabilizzazione video e Live streaming, Nero",
+                "QuantitaMax" : "4",
+                "Spedizione" : "Spedizione gratuita",
+                "Codice" : 7,
+                "Categoria" : "Fotocamere",
+                "Recensioni" : []
+            },
+            {
+                "Nome" : "DE LONGHI Essenza Mini EN85.B",
+                "Prezzo" : "75.99",
+                "Immagine" : "img/caffe.jpg",
+                "Descrizione" : "Macchina per caffè - Pressione 19 bar - Potenza 1370 W - Capacità serbatoio 0,6 lt - Funzione Energy Saving - Vaschetta di recupero capsule usate - Thermoblock",
+                "QuantitaMax" : "2",
+                "Spedizione" : "Spedizione gratuita",
+                "Codice" : 8,
+                "Categoria" : "Elettrodomestici",
+                "Recensioni" : []
+            },
+            {
+                "Nome" : "Lavatrice BOSCH WTW85458II",
+                "Prezzo" : "549.00",
+                "Immagine" : "img/lavatrice.jpg",
+                "Descrizione" : "Asciugatrice - Classe energetica: A ++ - Capacità di carico: 8 kg - Partenza ritardata - Programma lana - Rapido 40 min - Antipiega - Refresh - Profondità: 59,9 cm",
+                "QuantitaMax" : "4",
+                "Spedizione" : "Spedizione gratuita",
+                "Codice" : 9,
+                "Categoria" : "Elettrodomestici",
+                "Recensioni" : []
+            },
+            {
+                "Nome" : "Il Trono Di Spade, stagioni 1-7",
+                "Prezzo" : "67.99",
+                "Immagine" : "img/got.jpg",
+                "Descrizione" : "Custodia in cartoncino contentente 7 singoli case, uno per ogni stagione",
+                "QuantitaMax" : "6",
+                "Spedizione" : "Spedizione gratuita",
+                "Codice" : 10,
+                "Categoria" : "Film e TV",
+                "Recensioni" : []
+            },
+            {
+                "Nome" : "Inception",
+                "Prezzo" : "14.99",
+                "Immagine" : "img/inception.jpg",
+                "Descrizione" : "Formato audio 5.1 Dolby Digital: Italiano Francese Tedesco 5.1 DTS HD: Inglese",
+                "QuantitaMax" : "5",
+                "Spedizione" : "Spedizione gratuita",
+                "Codice" : 11,
+                "Categoria" : "Film e TV",
+                "Recensioni" : []
+            },
+            {
+                "Nome" : "FIFA 19 Xbox One",
+                "Prezzo" : "29.98",
+                "Immagine" : "img/fifa.jpg",
+                "Descrizione" : "Edizione standard Fifa 19 per Xbox One",
+                "QuantitaMax" : "0",
+                "Spedizione" : "Spedizione gratuita",
+                "Codice" : 12,
+                "Categoria" : "Videogiochi",
+                "Recensioni" : []
+            }
+]
+

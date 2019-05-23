@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="Stile.css">
+    <script type="text/javascript" src="Registrazione.js"></script>
+    <script src="Utenti.json"></script>
+
+</head>
+
+<body class="bg-light">
+    <img src=img/logoscritta.png class="mx-auto d-block mb-4" id="logo">
+
+    <div class="container" id="registrazioneForm">
+        <div class="row justify-content-center">
+            <div class="col-6">
+
+
+
+                <div class="card bg-white border shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title">Registrati</h3>
+                        <hr>
+
+                        <form>
+                            <div class="form-group">
+                                <input type="radio" name="tipo" value="cliente" onclick="formC()" checked> Cliente <br>
+                                <input type="radio" name="tipo" value="venditore" onclick="formV()"> Venditore
+                            </div>
+                        </form>
+
+                        <!--FORM CLIENTE DEFAULT-->
+
+                        <form id="form-c" onsubmit="validazione()">
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <div class="col">
+                                        <label for="nome">Nome:</label>
+                                        <input id="nome" type="text" class="form-control" name="nome" required>
+                                    </div>
+                                    <div class="col">
+                                        <label for="cognome">Cognome:</label>
+                                        <input id="cognome" type="text" class="form-control" name="cognome" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefono">Numero di telefono:</label>
+                                <input id="telefono" type="text" name="telefono" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="indirizzo">Indirizzo:</label>
+                                <input id="indirizzo" type="text" name="indirizzo" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">E-mail:</label>
+                                <input id="email" type="email" name="email" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <p>Seleziona il metodo di pagamento:</p>
+                                <select name="pagamento" id="pagamento">
+                                    <option value="prepagata" selected>Carta prepagata</option>
+                                    <option value="credito">Carta di credito</option>
+                                    <option value="paypal">Paypal</option>
+                                </select>
+                            </div>
+                            <br>
+                            <input id="privacy" type="checkbox" name="privacy" value="accettata" required> Cliccando qui
+                            acconsenti al trattamento dei tuoi dati personali <br>
+                            <br>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input id="password1" type="password" name="password1" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Conferma password:</label>
+                                <input id="password2" type="password" name="password2" class="form-control" required>
+                            </div>
+
+                            <br>
+
+                            <input type="submit" class="btn btn-primary btn-block"  
+                                value="Registrati"/>
+
+                            
+                        </form>
+
+
+
+                        <!--FORM VENDITORE HIDDEN-->
+
+                        <form id="form-v" onsubmit="validazione()" action="Login.html">
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <div class="col">
+                                        <label for="nomeV">Nome:</label>
+                                        <input id="nomeV" type="text" class="form-control" name="nomeV" required>
+                                    </div>
+                                    <div class="col">
+                                        <label for="cognomeV">Cognome:</label>
+                                        <input id="cognomeV" type="text" class="form-control" name="cognomeV" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-row">
+                                    <div class="col">
+                                        <label for="nomeAtt">Nome attività:</label>
+                                        <input id="nomeAtt" type="text" class="form-control" name="nomeAtt">
+                                    </div>
+                                    <div class="col">
+                                        <label for="tipoAtt">Tipo di attività:</label>
+                                        <input id="tipoAtt" type="text" class="form-control" name="tipoAtt">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefonoV">Numero di telefono:</label>
+                                <input id="telefonoV" type="text" name="telefonoV" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="emailV">E-mail:</label>
+                                <input id="emailV" type="email" name="emailV" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="piva">Partita IVA:</label>
+                                <input id="piva" type="text" name="piva" class="form-control" required>
+                            </div>
+
+                            <br>
+
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input id="password1" type="password" name="password1" class="form-control" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Conferma password:</label>
+                                <input id="password2" type="password" name="password2" class="form-control" required>
+                            </div>
+
+                            <br>
+
+                            <input type="submit" class="btn btn-primary btn-block" 
+                                value="Registrati"/>
+
+                        </form>
+
+                        <br>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--FOOTER-->
+    <footer class="page-footer text-center text-secondary mt-5 small">
+        <p>Project by Rita Albertini<br>SEARCH & BUY</p>
+    </footer>
+
+</body>
+
+</html>

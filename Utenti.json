@@ -1,0 +1,59 @@
+var Clienti = [
+
+    {
+        "nome": "Rita",
+        "cognome" : "Albertini",
+        "telefono" : "3450660086",
+        "indirizzo" : "Via Rossi 7",
+        "email" : "albertinirita@gmail.it",
+        "pagamento" : "Carta prepagata",
+        "privacy" : "accettata",
+        "password" : "123",
+        "ordini" : []
+    },
+
+    {
+        "nome": "Sara",
+        "cognome" : "Bianchi",
+        "telefono" : "3424556754",
+        "indirizzo" : "Via celoria 18",
+        "email" : "sara.bianchi@gmail.com",
+        "pagamento" : "Paypal",
+        "privacy" : "accettata",
+        "password" : "456",
+        "ordini" : []
+    }
+
+]
+
+
+var Venditori = [
+
+    {
+        "nome" : "Marco",
+        "cognome" : "Ferrari",
+        "nomeAttivita" : "Ferrari S.p.a",
+        "tipoAttivita" : "Elettronica",
+        "telefono" : "3292124668", 
+        "email" : "marco.ferrari@gmail.com",
+        "partitaIva" : "42114238905",
+        "password" : "1234",
+        "prodotti" : [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    },
+
+    {
+        "nome" : "Giulia",
+        "cognome" : "Rossi",
+        "nomeAttivita" : "Amazon",
+        "tipoAttivita" : "E-commerce",
+        "telefono" : "2451338799", 
+        "email" :"rossigiulia92@gmail.com",
+        "partitaIva" : "43564242967",
+        "password" : "5678",
+        "prodotti" : [10, 11, 12]
+    }
+
+]
+
+

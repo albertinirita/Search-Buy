@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+        
+    <script type="text/javascript" src="Prodotti.json"></script>
+    <script type="text/javascript" src="Utenti.json"></script>
+    <link rel="stylesheet" href="Stile.css">
+    <script type="text/javascript" src="Home.js"></script>
+    <script type="text/javascript" src="Registrazione.js"></script>
+    <script type="text/javascript" src="InfoUtente.js"></script>
+
+</head>
+
+<body class="bg-light" onload="accesso(), infoUtente()">
+
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-sm navbar-light shadow-sm bg-white border-bottom">
+        <a class="navbar-brand" href="home.html">
+            <img src="img/logowhite.png" alt="Logo" style="width:40px;">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item" id="log">
+                    
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-dark" id="carrello" href="Carrello.html">Carrello</a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" id="ordini" href="Ordini.html">Ordini</a>
+                </li>
+            </ul>
+            <form class="form-inline mr-3">
+                <input class="form-control mr-sm-2" type="text" placeholder="Cerca" aria-label="Search">
+                <button class="btn btn-primary my-2" type="button" onclick="cerca()" type="submit"> 
+                    <i class="material-icons d-flex">search</i>
+                </button>
+            </form>
+
+        </div>   
+    </nav>
+
+    <div class="container p-3">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+
+                <div class="card bg-white border shadow-sm p-4">
+
+                    <h3 class="card-header bg-white" id="titolo"></h3>
+
+                    <div class="card-body">
+
+                        <p>Sei registrato come: <span id="tipoUtente"></span> </p>
+
+                        <!--FORM CLIENTE-->
+
+                            <form id="form-c" class="mt-4">
+
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <label for="nome">Nome:</label>
+                                            <input id="nome" type="text" class="form-control" name="nome" required>
+                                        </div>
+                                        <div class="col">
+                                            <label for="cognome">Cognome:</label>
+                                            <input id="cognome"type="text" class="form-control" name="cognome" required>
+                                        </div>
+                                    </div>
+                                </div>    
+
+                                <div class="form-group">
+                                    <label for="telefono">Numero di telefono:</label>
+                                    <input id="telefono" type="text" name="telefono" class="form-control">  
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="indirizzo">Indirizzo:</label>
+                                    <input id="indirizzo" type="text" name="indirizzo" class="form-control">  
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">E-mail:</label>
+                                    <input id="email" type="email" name="email" class="form-control" required>  
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <p>Metodo di pagamento selezionato:</p>
+                                    <select id="pagamento">
+                                        <option name="pagamento" value="prepagata">Carta prepagata</option>
+                                        <option name="pagamento" value="credito">Carta di credito</option>
+                                        <option name="pagamento" value="paypal">Paypal</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <input id="privacy" type="checkbox" name="privacy" value="accettata" required checked> Hai acconsentito al trattamento dei tuoi dati personali <br>
+                                <br>
+                                <div class="form-group" id="password">
+                                    <label for="password">Password:</label>
+                                    <input id="password1" type="password" name="password1" class="form-control mb-2" required>  
+                                </div>
+    
+                                <div class="form-group">
+                                    <label for="password">Conferma password:</label>
+                                    <input id="password2" type="password" name="password2" class="form-control" required>  
+                                </div>
+    
+                                <div class="row mt-5">
+                                    <div class="col">
+                                        <button type="button" class="btn btn-primary block w-100" onclick="ripristinaAccount()">Ripristina modifiche</button>
+                                    </div>
+                                    <div class="col">
+                                        <button type="button" class="btn btn-primary w-100" onclick="modificaAccount()">Salva modifiche</button>
+                                    </div>
+                                </div>
+                            </form>
+
+
+                            <!--FORM VENDITORE HIDDEN-->
+                                                            
+                            <form id="form-v">
+
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <label for="nomeV">Nome:</label>
+                                            <input id="nomeV" type="text" class="form-control" name="nomeV" required>
+                                        </div>
+                                        <div class="col">
+                                            <label for="cognomeV">Cognome:</label>
+                                            <input id="cognomeV" type="text" class="form-control" name="cognomeV" required>                                            </div>
+                                        </div>
+                                    </div>    
+
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <label for="nomeAtt">Nome attività:</label>
+                                            <input id="nomeAtt" type="text" class="form-control" name="nomeAtt">
+                                        </div>
+                                        <div class="col">
+                                            <label for="tipoAtt">Tipo di attività:</label>
+                                            <input id="tipoAtt" type="text" class="form-control" name="tipoAtt">
+                                        </div>
+                                    </div>
+                                </div>   
+
+                                <div class="form-group">
+                                    <label for="telefonoV">Numero di telefono:</label>
+                                    <input id="telefonoV" type="text" name="telefonoV" class="form-control">  
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="emailV">E-mail:</label>
+                                    <input id="emailV" type="email" name="emailV" class="form-control" required>  
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="piva">Partita IVA:</label>
+                                    <input id="piva" type="text" name="piva" class="form-control" required>  
+                                </div>
+
+                                <br>
+
+                                <div class="form-group" id="password">
+                                    <label for="password">Password:</label>
+                                    <input id="password1" type="password" name="password1" class="form-control mb-2" required>  
+                                </div>
+    
+                                <div class="form-group">
+                                    <label for="password">Conferma password:</label>
+                                    <input id="password2" type="password" name="password2" class="form-control" required>  
+                                </div>
+    
+                                <div class="row mt-5">
+                                    <div class="col">
+                                        <button type="button" class="btn btn-primary block w-100" onclick="ripristinaAccount()">Ripristina modifiche</button>
+                                    </div>
+                                    <div class="col">
+                                        <button type="button" class="btn btn-primary w-100" onclick="modificaAccount()">Salva modifiche</button>
+                                    </div>
+                                </div>
+                                    
+                            </form>
+
+                            <br>
+                                
+                            
+
+                            <hr>
+
+                            <button type="button" class="btn btn-danger w-100" onclick="eliminaAccount()">Elimina account</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--FOOTER-->
+    <footer class="page-footer text-center text-secondary mt-5 small">
+        <p>Project by Rita Albertini<br>SEARCH & BUY</p>
+    </footer>
+    
+</body>
+
